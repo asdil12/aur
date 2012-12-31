@@ -2,7 +2,7 @@
 
 pkgname=python-osmgpsmap-git
 pkgver=20121231
-pkgrel=1
+pkgrel=2
 pkgdesc="Python bindings for osm-gps-map"
 arch=('i686' 'x86_64')
 url="http://nzjrs.github.com/osm-gps-map/"
@@ -34,7 +34,7 @@ build() {
   autoreconf --force --install
   # I hate automake
   sed -i "s|python python2|python2|" configure
-  ./configure
+  ./configure --prefix=/usr
   make
 }
 
