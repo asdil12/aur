@@ -1,7 +1,7 @@
 # Maintainer: Dominik Heidler <dheidler@gmail.com>
 
 pkgname=libuhd
-pkgver=3.5.0
+pkgver=3.5.1
 pkgrel=1
 pkgdesc="Universal Software Radio Peripheral userspace driver"
 arch=('x86_64' 'i686')
@@ -21,7 +21,7 @@ IFS="$_ifsold"
 unset _ifsold
 
 source=("libuhd-$pkgver.tar.gz::https://nodeload.github.com/EttusResearch/UHD-Mirror/tar.gz/release_$_verstring")
-md5sums=('e43bd2e2ba057c5899f960528b58fdb8')
+md5sums=('8444701bbcaff9d4dcbf2613ff5c5257')
 
 build() {
   cd $srcdir/UHD-Mirror-release_$_verstring/host
