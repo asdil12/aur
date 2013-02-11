@@ -20,7 +20,7 @@ build() {
 	mkdir build
 	cd build
 	cmake -DPYTHON_EXECUTABLE=$(which python2) -DPYTHON_INCLUDE_DIR=$(echo /usr/include/python2*) DPYTHON_LIBRARY=$(echo /usr/lib/libpython2.*.so) -DCMAKE_INSTALL_PREFIX=/usr ../ 
-	make $MAKEFLAGS
+	make
 }
 
 check() {
