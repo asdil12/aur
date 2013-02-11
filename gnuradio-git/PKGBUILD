@@ -32,18 +32,16 @@ build() {
 	mkdir build
 	cd build
 	cmake -DPYTHON_EXECUTABLE=$(which python2) -DPYTHON_INCLUDE_DIR=$(echo /usr/include/python2*) DPYTHON_LIBRARY=$(echo /usr/lib/libpython2.*.so) -DCMAKE_INSTALL_PREFIX=/usr ../ 
-	make $MAKEFLAGS
+	make
 }
 
-check()
-{
+check() {
 	cd ${srcdir}/$_gitname/build
 	export PYTHON=python2
 	#make test
 }
 
-package()
-{
+package() {
 	msg "Replacing filenames to use python2."
 	sed -i -e "s|#![ ]*/usr/bin/env python$|#!/usr/bin/env python2|" $(find ${srcdir} -name '*.py') $(find ${srcdir} -name 'gnuradio-companion' -o -name 'flow_graph.tmpl')
 	cd ${srcdir}/$_gitname/build
