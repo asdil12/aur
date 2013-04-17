@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if msum=`makepkg -g` ; then
+	sed -i -e "s/^md5sums.*$/$msum/" PKGBUILD
+	echo "$msum"
+fi
