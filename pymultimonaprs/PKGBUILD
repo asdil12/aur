@@ -1,7 +1,7 @@
 # Maintainer: Dominik Heidler <dheidler@gmail.com>
 
 pkgname=pymultimonaprs
-pkgver=0.5
+pkgver=0.7
 pkgrel=1
 pkgdesc="HF2APRS-IG Gateway"
 arch=(any)
@@ -12,7 +12,7 @@ provides=()
 depends=('python2' 'multimon-ng-git' 'rtl-sdr')
 
 source=("$pkgname-$pkgver.tar.gz::https://nodeload.github.com/asdil12/pymultimonaprs/tar.gz/$pkgver")
-md5sums=('b63baa7a7c71e784df828e846302a4b5')
+md5sums=('6805779480368204119d64aca06d54b3')
 
 package() {
 	cd $srcdir/$pkgname-$pkgver
