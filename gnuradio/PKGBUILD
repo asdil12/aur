@@ -1,7 +1,7 @@
 # Maintainer: Dominik Heidler <dheidler@gmail.com>
 pkgname=gnuradio
-pkgver=3.7.0
-pkgrel=2
+pkgver=3.7.1
+pkgrel=1
 pkgdesc="free software development toolkit that provides the signal processing runtime and processing blocks to implement software radios using readily-available, low-cost external RF hardware and commodity processors"
 arch=('i686' 'x86_64')
 url="http://gnuradio.org"
@@ -12,7 +12,7 @@ optdepends=('wxpython: gr-wxgui' 'python2-cheetah: grc' 'python2-lxml: grc' 'qwt
 conflicts=('gnuradio-git')
 
 source=("http://gnuradio.org/releases/$pkgname/$pkgname-$pkgver.tar.gz")
-md5sums=('c2856ee14b415a64abf5dc9af0f5374c')
+md5sums=('6c5e67da6ed8724dd900d8e343b64be4')
 
 build() {
 	export PYTHON=python2
