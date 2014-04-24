@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 url="http://gqrx.dk/"
 license=('GPL')
 depends=('qt5-svg' 'libpulse' 'gr-osmosdr')
-makedepends=('boost')
+makedepends=('boost' 'git')
 install='gqrx.install'
 #source=("$pkgname-$pkgver.tar.gz::https://codeload.github.com/csete/gqrx/tar.gz/v$pkgver" "${pkgname}.png" "${pkgname}.desktop")
 source=("git://github.com/csete/gqrx.git#commit=eca0ea7163ff16abd698737fc8ac1baab21be668" "${pkgname}.png" "${pkgname}.desktop")
